@@ -4,6 +4,7 @@ import tkinter
 from tkinter import Tk, Button, Text
 
 win = Tk()
+Output = Text(win, height=2, width=35, bg="light cyan")
 
 
 def window():
@@ -38,10 +39,10 @@ pwd = ""
 
 
 def copy_select():
-    global data
+    Output.tag_add("sel", "1.0", "end")
     try:
         if Output.selection_get():
-            data = Output.selection_get()
+            win.clipboard_append(pwd)
     except:
         print("nothing Copied")
 
