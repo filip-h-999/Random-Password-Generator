@@ -9,13 +9,13 @@ Output = Text(win, height=2, width=35, bg="light cyan")
 
 def window():
     win.title("Password Generator")
-    win.geometry('400x200')
+    win.geometry('395x198')
     win.resizable(False, False)
-    # win["background"] = "#263445"
+    win["background"] = "black"
 
     img = PhotoImage(file=r"img\rick.png")
     background_label = Label(win, image=img)
-    background_label.place(x=0, y=0)
+    background_label.place(x=-2, y=0)
 
     button()
     label()
